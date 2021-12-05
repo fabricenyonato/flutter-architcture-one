@@ -4,17 +4,16 @@ class DataState<T> {
 
   final bool isLoading;
   final bool isError;
-  final bool isSuccess;
 
   const DataState.loading():
-    isLoading = true, isError = false, isSuccess = false,
+    isLoading = true, isError = false,
     data = null, error = null;
 
   const DataState.error(this.error):
-    isLoading = false, isError = true, isSuccess = false,
+    isLoading = false, isError = true,
     data = null;
 
   const DataState.success(this.data):
-    isLoading = false, isError = false, isSuccess = true,
+    isLoading = false, isError = false,
     error = null;
 }
